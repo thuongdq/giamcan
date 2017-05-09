@@ -1,0 +1,78 @@
+.post-special {
+    @extend %box;
+    @include padding(7px, 7px, 7px, 7px);
+    .item {
+        margin-top: 7px;
+        display: table;
+        width: 100%;
+        background: #eeeddf;
+        a {
+            &:first-child {
+                display: block;
+                width: 112px;
+                height: 75px;
+                text-align: center;
+                img {
+                    width: 100%;
+                    max-height: 75px;
+                }
+            }
+            &:last-child {
+                display: block;
+                @include padding(7px, 7px, 7px, 7px);
+                line-height: 15px;
+                width: calc(100% - 115px);
+                font-size: 14px;
+                font-weight: bold;
+            }
+        }
+        &:nth-child(2n) {
+            a {
+                &:first-child {
+                    float: left;
+                }
+                &:last-child {
+                    float: right;
+                }
+            }
+        }
+        &:nth-child(2n+1) {
+            a {
+                &:first-child {
+                    float: right;
+                }
+                &:last-child {
+                    float: left;
+                }
+            }
+        }
+        &:first-child {
+            position: relative;
+            margin-top: 0px;
+            a {
+                width: 100%;
+                &:first-child {
+                    display: block;
+                    height: 244px;
+                    text-align: center;
+                    img {
+                        width: 100%;
+                        max-height: 244px;
+                    }
+                }
+                &:last-child {
+                    @include padding(4px, 7px, 6px, 7px);
+                    position: absolute;
+                    bottom: 0px;
+                    display: block;
+                    font-size: 16px;
+                    line-height: 19px;
+                    font-weight: bold;
+                    color: #fff;
+                    background: #000000;
+                    opacity: 0.5;
+                }
+            }
+        }
+    }
+}

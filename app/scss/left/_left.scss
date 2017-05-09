@@ -1,9 +1,9 @@
 .left {
-    position: relative;
-    float: left;
     padding: 0px;
-    @import 'menu';
-    @import 'healing';
-    @import 'related-diseases';
+    border: 0px;
+    @import "post-special";
+    @import "post-new";
+    @import "support";
+    @import "skill";
     @import "extend";
 }

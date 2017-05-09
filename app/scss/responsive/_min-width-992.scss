@@ -3,9 +3,103 @@
         width: 970px;
     }
     .menu-top {
+        min-height: auto !important;
+        margin-bottom: 40px;
+        background: #78b43d;
+        border-radius: 4px;
+        .container-fluid {
+            padding: 0px !important;
+            margin: 0px !important;
+            .navbar-collapse {
+                padding: 0px;
+            }
+        }
+        ul.navbar-right {
+            margin-right: 0px;
+            display: none;
+            li {
+                @include background($url_icon, no-repeat, 0 -35px);
+                a {
+                    text-indent: -9999px;
+                    border: none;
+                    width: 35px;
+                    padding: 0;
+                }
+            }
+        }
         ul.nav {
+            &>li {
+                position: inherit;
+                &.open {
+                    &>a,
+                    &>a:hover,
+                    &>&:focus {
+                        background: transparent;
+                    }
+                }
+                a {
+                    font-size: 14px;
+                    font-weight: 700;
+                    text-transform: uppercase;
+                    &:hover,
+                    &:focus {
+                        background: transparent;
+                        @include border(0px, 1px solid #5ca038, 0px, 1px solid #a7d074);
+                    }
+                }
+                &>a {
+                    padding: 0px;
+                    color: #fff;
+                    line-height: 32px;
+                    display: block;
+                    padding: 0 6px;
+                    @include border(0px, 1px solid #5ca038, 0px, 1px solid #a7d074);
+                    .caret {
+                        &:hover {
+                            background: none;
+                        }
+                        display: none;
+                    }
+                    &.home {
+                        width: 34px;
+                        padding: 0;
+                        text-indent: -9999px;
+                        border: none;
+                        @include background($url_icon, no-repeat, 0 0);
+                    }
+                }
+                &.current-menu-item {
+                    .dropdown-menu {
+                        display: block !important;
+                    }
+                }
+                &:first-child {
+                    a {
+                        border-left: 0px;
+                    }
+                }
+                &:last-child {
+                    a {
+                        border-right: 0px;
+                    }
+                }
+            }
             .dropdown-menu {
-                width: 970px !important;
+                padding: 3px 0px;
+                width: 968px !important;
+                max-width: 1010px !important;
+                height: auto !important;
+                border-top: 0px !important;
+                li {
+                    display: block;
+                    float: left;
+                    a {
+                        border: none;
+                        &:hover {
+                            color: #9b9b9b;
+                        }
+                    }
+                }
             }
         }
     }
