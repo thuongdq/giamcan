@@ -1,0 +1,42 @@
+.related-diseases {
+    border: 1px solid #74acc1;
+    margin: 0px;
+    .panel-heading {
+        @extend %title-box;
+    }
+    .panel-body {
+        padding: 4px 0px 6px 0px;
+        position: relative;
+        border-bottom: 3px solid #4c9dbb;
+        ul {
+            list-style-type: none;
+            padding: 0px;
+            background: #fff;
+            margin: 0px;
+            &>li {
+                &>a {
+                    &:before {
+                        content: "+";
+                        padding: 0px 7px;
+                        color: #ff6b00;
+                    }
+                }
+            }
+        }
+        .read-more-related-diseases {
+            font-size: 13px;
+            line-height: 19px;
+            position: absolute;
+            right: 0px;
+            bottom: 0px;
+            background: #4c9dbb;
+            display: inline-block;
+            height: 18px;
+            width: 67px;
+            color: #fff;
+            border-top-left-radius: 12px;
+            text-align: center;
+            text-decoration: none;
+        }
+    }
+}

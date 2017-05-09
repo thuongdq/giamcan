@@ -1,0 +1,151 @@
+@import "bootstrap";
+@import "library/jquery.smartmenus.bootstrap";
+@import "library/lightslider";
+// main.scss
+body {
+    background-color: #ffffff;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+}
+
+a {
+    color: black;
+    &:hover,
+    &:focus {
+        text-decoration: none;
+        background: none;
+    }
+}
+
+$url_icon:"../img/icon.png";
+@mixin box($border, $border-radius, $padding) {
+    border: $border;
+    border-radius: $border-radius;
+    padding: $padding;
+}
+
+@mixin border($top, $right, $bottom, $left) {
+    border-top: $top;
+    border-right: $right;
+    border-bottom: $bottom;
+    border-left: $left;
+}
+
+@mixin border-radius($top-left, $top-right, $bottom-left, $bottom-right) {
+    border-top-left-radius: $top-left;
+    border-top-right-radius: $top-right;
+    border-bottom-left-radius: $bottom-left;
+    border-bottom-right-radius: $bottom-right;
+}
+
+@mixin background-before( $width, $url, $repeat, $coordinates) {
+    padding-left: $width;
+    @include background($url, $repeat, $coordinates);
+}
+
+@mixin background($url, $repeat, $coordinates) {
+    background: url($url) $repeat $coordinates;
+}
+
+@mixin multiple-background($url, $before, $after, $between, $between_repeat) {
+    background: url($url) $before no-repeat, url($url) 100% $after no-repeat, url($url) $between $between_repeat;
+}
+
+@mixin gradient($linear, $linear-to, $from, $between, $between-percent, $to) {
+    background: $from;
+    background: -moz-linear-gradient($linear, $from 0%, $between $between-percent, $to 100%);
+    background: -webkit-gradient($linear top, right top, color-stop(0%, $from), color-stop($between-percent, $between), color-stop(100%, $to));
+    background: -webkit-linear-gradient($linear, $from 0%, $between $between-percent, $to 100%);
+    background: -o-linear-gradient($linear, $from 0%, $between $between-percent, $to 100%);
+    background: -ms-linear-gradient($linear, $from 0%, $between $between-percent, $to 100%);
+    background: linear-gradient($linear-to, $from 0%, $between $between-percent, $to 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#{$from}', endColorstr='#{$to}');
+}
+
+h4 {
+    margin-top: 25px;
+}
+
+.row {
+    margin-bottom: 7px;
+}
+
+.row .row {
+    margin-top: 10px;
+    margin-bottom: 0;
+}
+
+[class*="col-"] {
+    padding-top: 15px;
+    padding-bottom: 15px;
+    background-color: #eee;
+    background-color: rgba(86, 61, 124, .15);
+    border: 1px solid #ddd;
+    border: 1px solid rgba(86, 61, 124, .2);
+}
+
+hr {
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+.slide-post-hot {
+    padding: 7px;
+    border: 1px solid #d6d6d6;
+    .lSAction {
+        &>a {
+            height: 53px;
+            margin-top: -26px;
+            width: 27px;
+        }
+        .lSPrev {
+            @include background($url_icon, no-repeat, 0px -131px);
+            left: 0px;
+            opacity: 0.8;
+        }
+        .lSNext {
+            @include background($url_icon, no-repeat, 0px -72px);
+            right: 0px;
+            opacity: 0.8;
+        }
+    }
+    ul {
+        &.lSPager {
+            display: none;
+        }
+        li {
+            a {
+                &:first-child {
+                    display: block;
+                    float: left;
+                    img {
+                        width: 62px;
+                        height: 62px
+                    }
+                }
+                &:last-child {
+                    font-size: 14px;
+                }
+            }
+        }
+    }
+}
+
+.breamcrums {
+    @include border( 1px solid #d6d6d6, 1px solid #d6d6d6, 1px solid #d6d6d6, 0px);
+    a,
+    .breadcrumb_last {
+        font-size: 14px;
+        line-height: 30px;
+        display: block;
+        float: left;
+    }
+}
+
+@import "header/header";
+@import "menu/menu-top";
+// @import "left/left";
+// @import "content/content";
+// @import "right/right";
+// @import "footer/footer";
+@import "responsive/responsive";

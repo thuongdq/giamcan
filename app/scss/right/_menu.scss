@@ -1,0 +1,25 @@
+.menu {
+    margin: 0px;
+    border: 0px;
+    .panel-heading {
+        @extend %title-box;
+    }
+    .panel-body {
+        padding: 0px;
+        ul {
+            list-style-type: none;
+            padding: 0px;
+            margin: 0px;
+            &>li {
+                @extend %title-box-sub;
+                margin-bottom: 3px;
+                >a {
+                    font-size: 16px;
+                    line-height: 19px;
+                    font-weight: bold;
+                    text-decoration: none;
+                }
+            }
+        }
+    }
+}

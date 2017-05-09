@@ -1,0 +1,9 @@
+.left {
+    position: relative;
+    float: left;
+    padding: 0px;
+    @import 'menu';
+    @import 'healing';
+    @import 'related-diseases';
+    @import "extend";
+}

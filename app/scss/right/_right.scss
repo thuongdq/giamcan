@@ -1,0 +1,10 @@
+.right {
+    width: 30%;
+    float: left;
+    padding: 0px;
+    @import "menu";
+    @import "nutrition-exercise";
+    @import "science";
+    @import "prevent";
+    @import "extend";
+}

@@ -1,0 +1,46 @@
+.science {
+    border: 0px;
+    margin: 0px;
+    .panel-heading {
+        @extend %title-box;
+    }
+    .panel-body {
+        padding: 0px 10px;
+        ul {
+            padding: 0px;
+            margin: 0px;
+            list-style-type: none;
+            li {
+                padding: 5px 0px 5px 0px;
+                &:first-child {
+                    a {
+                        &.image>img {
+                            width: 100%;
+                            height: 108px;
+                            border: 1px solid #b7b8b8;
+                            margin-bottom: 5px;
+                        }
+                        &.title {
+                            font-weight: bold;
+                            font-size: 14px;
+                            line-height: 17px;
+                            display: block;
+                        }
+                    }
+                }
+                &:nth-child(n+2) {
+                    @extend %title-icon;
+                    border-top: 1px dotted #bdbdbd;
+                    display: inline-flex;
+                    a {
+                        width: 100%;
+                        float: left;
+                        font-size: 14px;
+                        line-height: 16px;
+                        text-align: justify;
+                    }
+                }
+            }
+        }
+    }
+}

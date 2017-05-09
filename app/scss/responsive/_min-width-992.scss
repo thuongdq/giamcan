@@ -1,0 +1,12 @@
+@media (min-width: 992px) {
+    .container {
+        width: 970px;
+    }
+    .menu-top {
+        ul.nav {
+            .dropdown-menu {
+                width: 970px !important;
+            }
+        }
+    }
+}

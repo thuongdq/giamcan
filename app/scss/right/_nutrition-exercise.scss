@@ -1,0 +1,46 @@
+.nutrition-exercise {
+    border: 0px;
+    margin: 0px;
+    .panel-heading {
+        @extend %title-box;
+    }
+    .panel-body {
+        padding: 0px;
+        &>ul {
+            border: 0px;
+            margin-bottom: 5px;
+            li>a {
+                height: 25px;
+                min-height: auto;
+            }
+            li {
+                &:first-child {
+                    width: 45%;
+                    border-right: 1px solid #b6ebff;
+                    a {
+                        @include border-radius(4px, 0px, 4px, 0px);
+                        margin-right: 0px;
+                    }
+                }
+                &:last-child {
+                    width: 55%;
+                    border-left: 1px solid #409bbd;
+                    a {
+                        @include border-radius(0px, 4px, 0px, 4px);
+                        margin-right: 0px;
+                    }
+                }
+                a {
+                    @extend %title-box-sub;
+                    font-size: 13px;
+                    border: none;
+                }
+            }
+        }
+        .tab-content {
+            .tab-pane {
+                @include list-content(98px, 67px);
+            }
+        }
+    }
+}

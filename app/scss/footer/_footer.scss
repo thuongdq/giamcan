@@ -1,0 +1,124 @@
+footer {
+    background: #fff;
+    border: 1px solid #74acc1;
+    border-radius: 4px;
+    .menu-footer {
+        margin: 5px 0px 5px 0px;
+        &>a {
+            position: relative;
+            padding: 0px 8px;
+            font-size: 16px;
+            font-weight: bold;
+            text-transform: uppercase;
+            color: #087431;
+            display: block;
+            float: left;
+        }
+        ul {
+            list-style-type: none;
+            display: inline-block;
+            margin-bottom: -5px;
+            padding: 0px;
+            margin: 0px;
+            &:nth-child(2) {
+                li {
+                    display: block;
+                    float: left;
+                    // padding: 0 10px;
+                    background: url(../img/bg-icon.png) -2px -553px no-repeat;
+                    a {
+                        font-size: 14px;
+                        line-height: 19px;
+                        font-weight: 700;
+                        color: #0477a1;
+                    }
+                }
+            }
+            &:nth-child(3) {
+                padding: 0 8px;
+                li {
+                    border-radius: 4px;
+                    background: #ff904d;
+                    a {
+                        background: url(../img/bg-icon.png) 3px -590px no-repeat;
+                        color: #fff !important;
+                        font-size: 12px !important;
+                        line-height: 19px !important;
+                        font-weight: 400 !important;
+                        height: 22px;
+                        // padding: 3px 7px 3px 27px;
+                        border-radius: 4px;
+                    }
+                }
+            }
+        }
+    }
+    ul.contact {
+        list-style-type: none;
+        padding: 0px;
+        margin: 0px;
+        background: #63c663;
+        display: inline-block;
+        width: 100%;
+        >li {
+            display: inline-block;
+            color: #fff;
+            font-size: 15px;
+            line-height: 19px;
+            font-weight: bold;
+            border-left: 1px solid #fff;
+            padding: 6px 8px;
+            height: 30px;
+            &:first-child {
+                border-left: none;
+            }
+        }
+    }
+    .address {
+        font-size: 13.5px;
+        line-height: 21px;
+    }
+    .hospital {
+        display: block;
+        float: left;
+        padding-left: 10px;
+        width: 61%;
+        padding-right: 9px;
+    }
+    .company {
+        display: block;
+        float: left;
+        width: 39%;
+        padding-left: 18px;
+    }
+    .hospital .social {
+        list-style-type: none;
+        padding: 0px;
+        margin: 0px;
+        float: right;
+        display: inline-block;
+        li {
+            float: left;
+            display: inline-block;
+            a {
+                text-indent: -999px;
+                display: inline-block;
+                width: 16px;
+                height: 16px;
+            }
+        }
+        .facebook {
+            background: url(../img/bg-icon.png) -1px -617px no-repeat;
+        }
+        .google {
+            background: url(../img/bg-icon.png) -18px -617px no-repeat;
+        }
+        .tweeter {
+            background: url(../img/bg-icon.png) -36px -617px no-repeat;
+        }
+        .DMCA {
+            width: 79px;
+            background: url('../img/bg-icon.png') no-repeat -3px -636px, url('../img/bg-icon.png') 100% -654px no-repeat;
+        }
+    }
+}
