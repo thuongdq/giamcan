@@ -1,0 +1,27 @@
+.calo {
+    @extend .bmi;
+    .panel-heading {
+        color: #005844;
+    }
+    .panel-body {
+        .form-control {
+            display: block;
+            width: calc(50% - 3px);
+            float: left;
+            margin-top: 5px;
+        }
+        .form-group {
+            &:nth-child(2n+1) {
+                .form-control {
+                    margin-right: 6px;
+                }
+            }
+            &:nth-child(1),
+            &:nth-child(2) {
+                .form-control {
+                    margin-top: 0px;
+                }
+            }
+        }
+    }
+}

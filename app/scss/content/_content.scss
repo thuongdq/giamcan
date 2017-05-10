@@ -1,1 +1,5 @@
-.content {}
+.content {
+    @include padding(0px, 7px, 0px, 7px);
+    @import "post-new-home";
+    @import "overweight";
+}

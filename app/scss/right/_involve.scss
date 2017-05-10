@@ -1,0 +1,32 @@
+.involve {
+    @extend %box;
+    .panel-heading {
+        @extend %title-box;
+    }
+    .panel-body {
+        @include padding(0px, 7px, 7px, 7px);
+        .item {
+            @include padding(7px, 0px, 0px, 0px);
+            display: block;
+            width: calc(50% - 4px);
+            float: left;
+            a {
+                &:first-child {
+                    display: block;
+                    width: 112px;
+                    height: 75px;
+                    margin-bottom: 5px;
+                }
+                &:last-child {
+                    font-size: 14px;
+                    font-weight: bold;
+                    line-height: 17px;
+                    display: block;
+                }
+            }
+            &:nth-child(2n+1) {
+                margin-right: 8px;
+            }
+        }
+    }
+}

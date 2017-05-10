@@ -1,0 +1,34 @@
+.overweight {
+    @extend %box;
+    .panel-heading {
+        @extend %title-box;
+        display: block;
+        width: 100%;
+        h2 {
+            display: block;
+            float: left;
+            text-align: center;
+            width: 40%;
+        }
+        ul {
+            display: flex;
+            float: left;
+            list-style-type: none;
+            padding: 0px;
+            margin: 0px;
+            li {
+                background: #d5ecab;
+                border: 1px solid #a6d074;
+                display: block;
+                float: left;
+                border-radius: 4px;
+                a {
+                    font-size: 14px;
+                    font-weight: bold;
+                    line-height: 28px;
+                    text-align: center;
+                }
+            }
+        }
+    }
+}

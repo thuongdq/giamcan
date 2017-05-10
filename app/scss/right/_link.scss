@@ -1,0 +1,41 @@
+.link {
+    @extend %box;
+    background: #fff;
+    .panel-heading {
+        @extend %title-box;
+    }
+    .panel-body {
+        @include padding(0px, 0px, 0px, 0px);
+        ul {
+            padding: 0px;
+            list-style-type: none;
+            li {
+                display: block;
+                width: 100%;
+                float: left;
+                border-top: 1px solid #d0d4d3;
+                @include padding(0px, 7px, 0px, 7px);
+                a {
+                    display: block;
+                    float: left;
+                    font-size: 14px;
+                    line-height: 21px;
+                    display: block;
+                }
+                &:first-child {
+                    border-top: none;
+                }
+                &::after {
+                    content: '';
+                    @include background($url_icon, no-repeat, 10px -244px);
+                    color: #78b43d;
+                    width: 20px;
+                    height: 20px;
+                    display: block;
+                    float: left;
+                    padding-left: 0px;
+                }
+            }
+        }
+    }
+}

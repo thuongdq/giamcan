@@ -21,35 +21,40 @@
                     display: block;
                 }
                 &::before {
-                    content: '\2022 ';
-                    color: #78b43d;
-                    height: 34px;
-                    width: 10px;
+                    counter-increment: count_viewest;
+                    content: counter(count_viewest);
+                    background: #78b43d;
+                    color: #fff;
+                    border-radius: 20px;
+                    height: 24px;
+                    width: 24px;
                     display: block;
                     float: left;
-                    padding-left: 0px;
+                    padding-left: 0;
+                    text-align: center;
+                    line-height: 24px;
+                    margin-top: 7px;
+                    margin-right: 5px;
+                    font-weight: bold;
                 }
                 &:first-child {
+                    border-top: none;
                     a {
-                        font-size: 16px;
                         display: block;
                         float: left;
                         &:nth-child(1) {
-                            width: 100%;
+                            width: 234px;
+                            height: 157px;
                             margin-bottom: 5px;
+                            img {
+                                width: 100%;
+                                max-height: 157px;
+                            }
                         }
                         &:nth-child(2) {
-                            width: 112px;
-                            height: 77px;
+                            width: 100%;
+                            font-size: 16px;
                         }
-                    }
-                    span {
-                        display: block;
-                        width: calc(100% - 117px);
-                        float: right;
-                        text-align: justify;
-                        font-size: 14px;
-                        line-height: 15.5px;
                     }
                     &::before {
                         display: none;

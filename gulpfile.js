@@ -30,13 +30,14 @@ var config = {
     ],
     jsConcatFiles: [
         'app/bower_components/Jquery-ex/jquery.min.js',
-        'app/js/**/*.js',
-        // 'app/js/lib.run.js',
-        // 'app/js/main.js',
+        // 'app/js/**/*.js',
+        'app/js/lib.run.js',
+        'app/js/main.js',
         'app/bower_components/bootstrap-sass-official/assets/javascripts/bootstrap.min.js',
         'app/bower_components/smartmenus/jquery.smartmenus.js',
         'app/bower_components/smartmenus/addons/bootstrap/jquery.smartmenus.bootstrap.js',
         'app/bower_components/lightslider-master/src/js/lightslider.js',
+        'app/js/end.js',
         '!app/js/app.bundle.js'
     ],
     htmlListenFiles: [

@@ -1,0 +1,47 @@
+.post-new-home {
+    @extend %box;
+    @include padding(7px, 7px, 7px, 7px);
+    display: inline-block;
+    .item {
+        display: block;
+        float: left;
+        width: calc(33.33% - 6px);
+        &:nth-child(2),
+        &:nth-child(3) {
+            margin-right: 9px;
+        }
+        &:first-child {
+            background: #78b43d;
+            width: 100%;
+            margin-bottom: 2px;
+            .info {
+                @include padding(6px, 6px, 6px, 6px);
+                a {
+                    font-size: 20px;
+                    line-height: 22px;
+                    font-weight: bold;
+                    color: #fff;
+                    display: block;
+                    width: 100%;
+                }
+                span {
+                    color: #fff;
+                    font-size: 14px;
+                    display: block;
+                    line-height: 16px;
+                }
+            }
+        }
+        &:nth-child(2),
+        &:nth-child(3),
+        &:nth-child(4) {
+            a {
+                font-size: 14px;
+                font-weight: bold;
+                display: block;
+                line-height: 16px;
+                margin-top: 5px;
+            }
+        }
+    }
+}
